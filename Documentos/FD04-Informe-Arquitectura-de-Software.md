@@ -1,6 +1,6 @@
 ﻿![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.001.png)		Logo de mi Cliente
 
-![C:\Users\EPIS\Documents\upt.png](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.002.png)
+![Logo UPT](Images/upt.png)
 
 **UNIVERSIDAD PRIVADA DE TACNA**
 
@@ -234,7 +234,7 @@ Con este alcance, el proyecto se enfoca en proporcionar una herramienta de entre
 - vCPU: Virtual Central Processing Unit (Unidad Central de Procesamiento Virtual).
   1. <a name="_toc69808838"></a>Organización del documento
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.003.png)
+![Organigrama](Images/organigrama.png)
 
 1. # <a name="_toc69808839"></a>**OBJETIVOS Y RESTRICCIONES ARQUITECTONICAS**
    1. Priorización de requerimientos
@@ -355,7 +355,265 @@ Con este alcance, el proyecto se enfoca en proporcionar una herramienta de entre
 
 ![Diagrama de Objetos UC04](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC04-Diagrama-Objetos.puml)
 1. ### <a name="_toc69808850"></a>Diagrama de Clases
-![Diagrama de Clases](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Clases.puml)
+
+```mermaid
+classDiagram
+    %% CAPA DE PRESENTACIÓN
+    class MainActivity {
+        -BuildContext context
+        -AuthService authService
+        +initializeApp() void
+        +checkAuthStatus() bool
+        +navigateToHome() void
+    }
+    
+    class GamesScreen {
+        -List~GameType~ availableGames
+        -GameCategory selectedCategory
+        +loadMultiplayerGames() void
+        +loadSoloGames() void
+        +navigateToGame(gameType) void
+    }
+    
+    class ProfileScreen {
+        -UserModel userProfile
+        -FormController formController
+        +loadUserData() void
+        +updateProfile(userData) Future~bool~
+        +validateForm() bool
+    }
+    
+    class BaseGameScreen {
+        <<abstract>>
+        #GameState gameState
+        #SocketService socketConnection
+        +initializeGame()* void
+        +handleGameEvent(event)* void
+        +showGameResult(result) void
+    }
+    
+    class MultiplayerGameScreen {
+        -string roomCode
+        -List~Player~ playersList
+        -GameConfiguration gameConfig
+        +createRoom() Future~string~
+        +joinRoom(code) Future~bool~
+        +startGame() void
+    }
+    
+    class SoloGameScreen {
+        -Card currentCard
+        -CardDeck cardDeck
+        -AnimationController animationController
+        +loadGame() void
+        +nextCard() void
+        +resetGame() void
+    }
+    
+    %% CAPA DE LÓGICA DE NEGOCIO
+    class AuthService {
+        -FirebaseAuth firebaseAuth
+        -UserModel currentUser
+        -string jwtToken
+        +login(email, password) Future~UserModel~
+        +register(userData) Future~UserModel~
+        +logout() Future~void~
+        +refreshToken() Future~string~
+    }
+    
+    class SocketService {
+        -WebSocketConnection connection
+        -Map~string, Function~ eventHandlers
+        -int reconnectAttempts
+        +connect(url) Future~bool~
+        +emit(event, data) void
+        +on(event, handler) void
+        +disconnect() void
+        +reconnect() Future~bool~
+    }
+    
+    class GameService {
+        -Map~string, GameInstance~ activeGames
+        -GameRules gameRules
+        +createGame(type, config) GameInstance
+        +joinGame(gameId, player) bool
+        +processMove(gameId, move) GameState
+        +endGame(gameId) GameResult
+    }
+    
+    class ApiService {
+        -string baseUrl
+        -HttpClient httpClient
+        -Map~string, string~ authHeaders
+        +get(endpoint) Future~Response~
+        +post(endpoint, data) Future~Response~
+        +put(endpoint, data) Future~Response~
+        +delete(endpoint) Future~Response~
+    }
+    
+    %% MODELOS DE DATOS
+    class UserModel {
+        +string id
+        +string email
+        +string name
+        +string avatar
+        +DateTime createdAt
+        +DateTime lastLogin
+        +toJson() Map~string, dynamic~
+        +fromJson(json) UserModel
+    }
+    
+    class GameModel {
+        +string id
+        +GameType type
+        +string name
+        +string description
+        +int minPlayers
+        +int maxPlayers
+        +bool isMultiplayer
+        +GameRules rules
+    }
+    
+    class RoomModel {
+        +string code
+        +string organizerId
+        +GameType gameType
+        +List~Player~ players
+        +GameConfiguration config
+        +RoomStatus status
+        +DateTime createdAt
+    }
+    
+    class CardModel {
+        +int id
+        +string text
+        +string category
+        +string difficulty
+        +GameType gameType
+    }
+    
+    class GameType {
+        <<enumeration>>
+        VASTA
+        INFILTRADO
+        TODITO
+        YO_NUNCA
+    }
+    
+    class RoomStatus {
+        <<enumeration>>
+        WAITING
+        CONFIGURING
+        PLAYING
+        FINISHED
+    }
+    
+    %% CAPA DE SERVICIOS BACKEND
+    class ServerManager {
+        -ExpressApp express
+        -SocketIOServer socketIO
+        -int port
+        +initializeServer() void
+        +setupRoutes() void
+        +setupSocketHandlers() void
+        +startServer() void
+    }
+    
+    class AuthController {
+        -FirebaseAdmin firebaseAdmin
+        +register(req, res) Response
+        +login(req, res) Response
+        +verifyToken(req, res, next) void
+        +refreshToken(req, res) Response
+    }
+    
+    class GameController {
+        -Map~string, GameInstance~ gameInstances
+        +createRoom(req, res) Response
+        +joinRoom(req, res) Response
+        +getGameState(req, res) Response
+        +updateGameConfig(req, res) Response
+    }
+    
+    class VastaGameHandler {
+        -Map~string, VastaGame~ activeGames
+        -string[] themes
+        +handleCreateRoom(socket, data) void
+        +handleJoinRoom(socket, data) void
+        +handleStartGame(socket, data) void
+        +handlePlayerMove(socket, data) void
+    }
+    
+    class VastaGame {
+        -string roomId
+        -Player[] players
+        -string currentTheme
+        -string currentLetter
+        -int currentTurn
+        -Timer timer
+        +startGame() void
+        +nextTurn() void
+        +processAnswer(answer) bool
+        +endGame() GameResult
+    }
+    
+    %% CAPA DE INFRAESTRUCTURA
+    class FirebaseConfig {
+        -string apiKey
+        -string authDomain
+        -string projectId
+        +initializeFirebase() void
+        +getFirestoreInstance() Firestore
+        +getAuthInstance() FirebaseAuth
+    }
+    
+    class DatabaseService {
+        <<interface>>
+        +create(collection, data) Future~string~
+        +read(collection, id) Future~Document~
+        +update(collection, id, data) Future~bool~
+        +delete(collection, id) Future~bool~
+    }
+    
+    class FirestoreService {
+        -Firestore firestore
+        +create(collection, data) Future~string~
+        +read(collection, id) Future~Document~
+        +update(collection, id, data) Future~bool~
+        +delete(collection, id) Future~bool~
+    }
+    
+    %% RELACIONES
+    MainActivity --> AuthService
+    ProfileScreen --> AuthService
+    GamesScreen --> GameService
+    MultiplayerGameScreen --> SocketService
+    MultiplayerGameScreen --> GameService
+    SoloGameScreen --> ApiService
+    
+    AuthService --> ApiService
+    GameService --> SocketService
+    SocketService --> ApiService
+    
+    AuthService --> UserModel
+    GameService --> GameModel
+    MultiplayerGameScreen --> RoomModel
+    SoloGameScreen --> CardModel
+    
+    ServerManager --> AuthController
+    ServerManager --> GameController
+    ServerManager --> VastaGameHandler
+    VastaGameHandler --> VastaGame
+    
+    AuthService --> FirebaseConfig
+    AuthController --> FirebaseConfig
+    GameController --> FirestoreService
+    FirestoreService ..|> DatabaseService
+    
+    MultiplayerGameScreen --|> BaseGameScreen
+    SoloGameScreen --|> BaseGameScreen
+```
+
 1. ### <a name="_toc69808851"></a>Diagrama de Base de datos (relacional o no relacional)
 ![Diagrama de Base de Datos](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-BaseDatos.puml)
 
