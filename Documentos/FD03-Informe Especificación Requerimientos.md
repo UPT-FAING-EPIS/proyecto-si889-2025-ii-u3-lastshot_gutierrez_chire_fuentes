@@ -388,7 +388,7 @@ El público objetivo son jóvenes de 18 a 35 años, estudiantes universitarios y
 
 #### `	     `***Diagrama de Actividades con objetos del CUS - Administrar Perfil de Usuario***
 
-![Diagrama de Actividades UC01](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC01-Diagrama-Actividades.puml)
+![Diagrama de Actividades UC01](http://www.plantuml.com/plantuml/png/~1https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC01-Diagrama-Actividades.puml)
 
 #### ***Diagrama de Actividades con objetos del CUS - Explorar Juegos Multijugador***
 
@@ -432,7 +432,7 @@ El público objetivo son jóvenes de 18 a 35 años, estudiantes universitarios y
 <a name="_heading=h.2gtnnk8tmnnt"></a>[	](#_heading=h.7lj19pswwxxu)
 ### `	`***<a name="_toc212821267"></a>d[***) Diagrama de Clases***](#_heading=h.7lj19pswwxxu)***
 
-![Diagrama de Clases](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Clases.puml)
+![Diagrama de Clases](http://www.plantuml.com/plantuml/png/~1https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Clases.puml)
 
 # <a name="_toc212821268"></a>[**CONCLUSIONES**](#_heading=h.zhgktmo5hklg)
 - El desarrollo del sistema permitió comprender e implementar de forma efectiva una arquitectura cliente-servidor moderna, donde la aplicación móvil, el backend y el gestor de WebSocket trabajan de manera coordinada para ofrecer una experiencia multijugador fluida en tiempo real.
