@@ -71,6 +71,7 @@ Integrantes:
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
 |1\.0|SFA|GGM|MCR|27/09/2025|Versión Original|
 |2\.0|SFA|GGM|MCR|30/10/2025|Versión Original|
+|3\.0|SFA|GGM|MCR|05/12/2025|Versión Original|
 
 
 # **INDICE GENERAL**
