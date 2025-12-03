@@ -95,4 +95,6 @@ endif
 
 |Usuario|
 :Visualiza perfil actualizado;
+stop
+
 @enduml
