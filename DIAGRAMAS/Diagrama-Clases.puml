@@ -1,0 +1,98 @@
+@startuml
+!theme aws-orange
+allowmixing
+
+title "Diagrama de Clases - Sistema LastShot\nArquitectura Completa del Sistema"
+
+' === CAPA DE PRESENTACIÓN ===
+package "Presentation Layer" #lightblue {
+  
+  class MainActivity {
+    - context: BuildContext
+    - authService: AuthService
+    + initializeApp(): void
+    + checkAuthStatus(): bool
+    + navigateToHome(): void
+  }
+  
+  class GamesScreen {
+    - availableGames: List<GameType>
+    - selectedCategory: GameCategory
+    + loadMultiplayerGames(): void
+    + loadSoloGames(): void
+    + navigateToGame(gameType): void
+  }
+  
+  class ProfileScreen {
+    - userProfile: UserModel
+    - formController: FormController
+    + loadUserData(): void
+    + updateProfile(userData): Future<bool>
+    + validateForm(): bool
+  }
+  
+  abstract class BaseGameScreen {
+    # gameState: GameState
+    # socketConnection: SocketService
+    + {abstract} initializeGame(): void
+    + {abstract} handleGameEvent(event): void
+    + showGameResult(result): void
+  }
+  
+  class MultiplayerGameScreen {
+    - roomCode: string
+    - playersList: List<Player>
+    - gameConfig: GameConfiguration
+    + createRoom(): Future<string>
+    + joinRoom(code): Future<bool>
+    + startGame(): void
+  }
+  
+  class SoloGameScreen {
+    - currentCard: Card
+    - cardDeck: CardDeck
+    - animationController: AnimationController
+    + loadGame(): void
+    + nextCard(): void
+    + resetGame(): void
+  }
+}
+
+' === CAPA DE LÓGICA DE NEGOCIO ===
+package "Business Logic Layer" #lightgreen {
+  
+  class AuthService {
+    - firebaseAuth: FirebaseAuth
+    - currentUser: UserModel
+    - jwtToken: string
+    + login(email, password): Future<UserModel>
+    + register(userData): Future<UserModel>
+    + logout(): Future<void>
+    + refreshToken(): Future<string>
+  }
+  
+  class SocketService {
+    - connection: WebSocketConnection
+    - eventHandlers: Map<string, Function>
+    - reconnectAttempts: int
+    + connect(url): Future<bool>
+    + emit(event, data): void
+    + on(event, handler): void
+    + disconnect(): void
+    + reconnect(): Future<bool>
+  }
+  
+  class GameService {
+    - activeGames: Map<string, GameInstance>
+    - gameRules: GameRules
+    + createGame(type, config): GameInstance
+    + joinGame(gameId, player): bool
+    + processMove(gameId, move): GameState
+    + endGame(gameId): GameResult
+  }
+  
+  class ApiService {
+    - baseUrl: string
+    - httpClient: HttpClient
+    - authHeaders: Map<string, string>
+@enduml
