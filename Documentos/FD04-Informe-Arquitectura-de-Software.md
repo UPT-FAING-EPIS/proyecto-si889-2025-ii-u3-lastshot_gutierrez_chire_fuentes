@@ -297,17 +297,17 @@ Con este alcance, el proyecto se enfoca en proporcionar una herramienta de entre
 1. # <a name="_toc69808842"></a>**REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA**
    1. <a name="_toc68679738"></a><a name="_toc69808843"></a>Vista de Caso de uso
       1. ### <a name="_toc69808844"></a>Diagramas de Casos de uso
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.004.png)
+![Diagrama de Casos de Uso](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Casos-Uso.puml)
 
 1. <a name="_toc68679739"></a><a name="_toc69808845"></a>Vista Lógica
 
 1. ### <a name="_toc68679740"></a><a name="_toc69124248"></a><a name="_toc69808846"></a>Diagrama de Subsistemas (paquetes)
 
-![ref1]
+![Diagrama de Paquetes](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Paquetes.puml)
 1. ### <a name="_toc69808847"></a>Diagrama de Secuencia (vista de diseño)
 #### `     `*D[*iagrama de Secuencia*](#_heading=h.7lj19pswwxxu) del CUS - Administrar Perfil de Usuario*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.006.png)
+![Diagrama de Secuencia UC01](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC01-Diagrama-Secuencia.puml)
 
 
 
@@ -315,7 +315,7 @@ Con este alcance, el proyecto se enfoca en proporcionar una herramienta de entre
 
 #### *D[*iagrama de Secuencia*](#_heading=h.7lj19pswwxxu) del CUS - Explorar Juegos Multijugador*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.007.png)
+![Diagrama de Secuencia UC02](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC02-Diagrama-Secuencia.puml)
 
 
 
@@ -324,7 +324,7 @@ Con este alcance, el proyecto se enfoca en proporcionar una herramienta de entre
 
 #### *D[*iagrama de Secuencia*](#_heading=h.7lj19pswwxxu) del CUS - Explorar Juegos de Dispositivo Único*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.008.png)
+![Diagrama de Secuencia UC03](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC03-Diagrama-Secuencia.puml)
 
 
 
@@ -334,48 +334,48 @@ Con este alcance, el proyecto se enfoca en proporcionar una herramienta de entre
 
 #### *D[*iagrama de Secuencia*](#_heading=h.7lj19pswwxxu) del CUS - Administrar Sala de Juego*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.009.png)
+![Diagrama de Secuencia UC04](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC04-Diagrama-Secuencia.puml)
 
 1. ### <a name="_toc69808848"></a>Diagrama de Colaboración (vista de diseño)
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.010.png)
+![Diagrama de Colaboración](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Colaboracion.puml)
 1. ### <a name="_toc69808849"></a>Diagrama de Objetos
 #### *Diagrama de objetos del CUS - Administrar Perfil de Usuario*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.011.png)
+![Diagrama de Objetos UC01](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC01-Diagrama-Objetos.puml)
 
 #### *Diagrama de objetos del CUS -  Explorar Juegos Multijugador*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.012.png)
+![Diagrama de Objetos UC02](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC02-Diagrama-Objetos.puml)
 
 #### *Diagrama de objetos del CUS -  Explorar Juegos de Dispositivo Único*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.013.png)
+![Diagrama de Objetos UC03](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC03-Diagrama-Objetos.puml)
 
 #### *Diagrama de objetos del CUS - Administrar Sala de Juego*
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.014.png)
+![Diagrama de Objetos UC04](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/UC04-Diagrama-Objetos.puml)
 1. ### <a name="_toc69808850"></a>Diagrama de Clases
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.015.png)
+![Diagrama de Clases](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Clases.puml)
 1. ### <a name="_toc69808851"></a>Diagrama de Base de datos (relacional o no relacional)
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.016.png)
+![Diagrama de Base de Datos](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-BaseDatos.puml)
 
 1. <a name="_toc68679746"></a><a name="_toc69808852"></a>Vista de Implementación (vista de desarrollo)
    1. ### <a name="_toc69808853"></a>Diagrama de arquitectura software (paquetes)
 
-![ref2]
+![Diagrama de Paquetes](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Paquetes.puml)
 1. ### <a name="_toc68679747"></a><a name="_toc69808854"></a>Diagrama de arquitectura del sistema (Diagrama de componentes)
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.018.png)
+![Diagrama de Componentes](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Componentes.puml)
 
 1. <a name="_toc68679741"></a><a name="_toc69124251"></a><a name="_toc69808855"></a>Vista de procesos
    1. ### <a name="_toc68679742"></a><a name="_toc69124252"></a><a name="_toc69808856"></a>Diagrama de Procesos del sistema (diagrama de actividad)
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.019.png)
+![Diagrama de Proceso Propuesto](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Proceso-Propuesto.puml)
 
 
 1. <a name="_toc68679744"></a><a name="_toc69808857"></a>Vista de Despliegue (vista física)
    1. ### <a name="_toc68679745"></a><a name="_toc69808858"></a>Diagrama de despliegue
 
-![](Aspose.Words.c4f94265-1f8f-4d6c-8234-bab4237e6a31.020.png)
+![Diagrama de Despliegue](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/UPT-FAING-EPIS/proyecto-si889-2025-ii-u3-lastshot_gutierrez_chire_fuentes/main/DIAGRAMAS/Diagrama-Despliegue.puml)
 
 1. # <a name="_toc69808859"></a>**ATRIBUTOS DE CALIDAD DEL SOFTWARE**
 <a name="_toc69808860"></a>**Escenario de Funcionalidad**
