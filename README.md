@@ -5,6 +5,16 @@
 
 # 🎮 LastShot - Plataforma de Juegos Multijugador
 
+---
+
+- Link del Video Explicativo del proyecto:
+- - https://www.youtube.com/watch?v=U4lJovLf3W4
+- Link de los Videos de Reacción de la Aplicación:
+- - Parte 01: https://www.youtube.com/watch?v=vxIwsza1gm4
+- - Parte 02: https://youtu.be/-MrYj700kM8
+
+---
+
 ## 📋 Descripción del Proyecto
 
 **LastShot** es una aplicación móvil desarrollada en Flutter que permite a los usuarios disfrutar de juegos de mesa digitales tanto en modo multijugador (en tiempo real) como en modo dispositivo único (offline). La plataforma incluye juegos populares como VASTA, El Infiltrado del Bar, TODITO y YO NUNCA.
